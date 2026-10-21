@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+
+<h1>Nossos serviços</h1>
+
+
+<div class="row">
+
+    <% servicos.forEach(servico => { %>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+
+                    <span class="badge bg-secondary"><%= servico.categoria %></span>
+                    <h5 class="card-title mt-2"><%= servico.nome %></h5>
+                    <p class="card-text"><%= servico.descricao %></p>
+                    <p class="preco">R$ <%= servico.preco.replace('.', ',') %></p>
+                    <a href="/servicos/<%= servico.id %>" class="btn btn-dark">Ver detalhes</a>
+                    
+                </div>
+            </div>
+        </div>
+    <% }) %>
+
+</div>
+
+
+<%- include('partials/footer') %>

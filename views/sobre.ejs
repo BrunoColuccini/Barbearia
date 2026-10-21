@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+
+<h1>Sobre a barbearia</h1>
+
+<p>Barbearia de bairro em Campinas, com cortes clássicos e modernos, barba e tratamentos.</p>
+<p>Segunda a sábado, das 8h às 20h.</p>
+
+
+<h2 class="h4 mt-4">Nossa equipe</h2>
+
+<ul class="list-group">
+
+    <% barbeiros.forEach(barbeiro => { %>
+        <li class="list-group-item">
+            <strong><%= barbeiro.nome %></strong> — <%= barbeiro.especialidade %>
+        </li>
+    <% }) %>
+    
+</ul>
+
+
+<%- include('partials/footer') %>

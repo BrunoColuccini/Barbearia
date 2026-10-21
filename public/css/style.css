@@ -1,0 +1,22 @@
+body {
+    background-color: #f5f2ec;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+}
+
+
+h1 {
+    margin-bottom: 1.5rem;
+}
+
+
+.preco {
+    color: #a87f33;
+    font-weight: bold;
+}

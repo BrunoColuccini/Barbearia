@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+
+<span class="badge bg-secondary"><%= servico.categoria %></span>
+
+<h1><%= servico.nome %></h1>
+
+<p><%= servico.descricao %></p>
+<p class="preco">R$ <%= servico.preco.replace('.', ',') %> · <%= servico.duracao_min %> min</p>
+
+
+<h2 class="h4 mt-4">Barbeiros que fazem este serviço</h2>
+
+<ul class="list-group mb-4">
+
+    <% barbeiros.forEach(barbeiro => { %>
+        <li class="list-group-item">
+            <strong><%= barbeiro.nome %></strong> — <%= barbeiro.especialidade %>
+        </li>
+    <% }) %>
+
+</ul>
+
+
+<a href="/" class="btn btn-outline-dark">Voltar</a>
+
+
+<%- include('partials/footer') %>
